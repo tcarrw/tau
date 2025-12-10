@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>τ Dynamics · Temporal Charge Exploration</title>
-  <meta name="description" content="Interactive exploration of temporal charge: nuclear spectra transformation and molecular cascade dynamics.">
+  <meta name="description" content="Interactive exploration of temporal charge: nuclear decay scaling, energy level harmonics, and molecular cascades.">
   <style>
 :root{
   --bg:#0a0b0d;
@@ -161,6 +161,47 @@ h1{
 
 .intro a:hover{
   text-decoration:underline;
+}
+
+.demo-index{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1rem;
+  margin-top:1.5rem;
+}
+
+@media(max-width:900px){
+  .demo-index{grid-template-columns:1fr;}
+}
+
+.demo-card{
+  background:rgba(0,0,0,0.3);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:1.5rem;
+}
+
+.demo-card h3{
+  font-size:1.1rem;
+  color:var(--accent-purple);
+  margin-bottom:0.5rem;
+}
+
+.demo-card p{
+  font-size:0.9rem;
+  margin:0.5rem 0;
+}
+
+.demo-card .badge{
+  display:inline-block;
+  padding:0.25rem 0.5rem;
+  background:var(--accent);
+  color:#000;
+  font-size:0.75rem;
+  font-weight:700;
+  border-radius:4px;
+  text-transform:uppercase;
+  margin-top:0.5rem;
 }
 
 /* DEMO SECTIONS */
@@ -403,20 +444,6 @@ input[type="range"]::-moz-range-thumb{
   border-color:var(--accent-gold);
 }
 
-/* CHART CONTAINER */
-.chart-container{
-  background:#000;
-  border-radius:8px;
-  padding:1rem;
-  min-height:400px;
-  position:relative;
-}
-
-.chart-canvas{
-  width:100%;
-  height:400px;
-}
-
 /* FOOTER */
 .earth-footer{
   margin-top:3rem;
@@ -512,7 +539,7 @@ li{
   <header>
     <div class="logo">τ</div>
     <h1>Temporal Charge Dynamics</h1>
-    <p class="subtitle">Interactive tools for exploring τ = ℏ/E through nuclear spectra and molecular cascades</p>
+    <p class="subtitle">Three interactive tools for exploring τ = ℏ/E across nuclear, atomic, and molecular scales</p>
     <p class="meta">December 10, 2025 · #pluribus · Illumina 1 · 6:1</p>
   </header>
 
@@ -539,34 +566,122 @@ li{
     
     <div class="eq">τ = ℏ/(mc²) = ℏ/E</div>
     
-    <p>Where ℏ is the reduced Planck constant, m is mass, c is the speed of light, and E is energy. Dimensionally, τ has units of time [seconds].</p>
-    
-    <p><strong>Physical interpretation:</strong> τ represents the characteristic "tick rate" of matter. Higher energy → shorter τ (faster oscillation). Lower energy → longer τ (slower oscillation).</p>
+    <p>Where ℏ is the reduced Planck constant, m is mass, c is the speed of light, and E is energy.</p>
     
     <div class="callout-box">
-      <strong>The Framework:</strong> This comes from <a href="https://time.plnt.earth">time.plnt.earth</a>'s unified temporal framework, where quantum (τ = ℏ/E) and relativistic (T = E/c³) formulations meet at bridge energy E = √(ℏc³) ≈ 333 TeV. Below the bridge energy (which includes all nuclear and atomic physics), τ = ℏ/E is the correct formulation.
+      <strong>The Framework:</strong> From <a href="https://time.plnt.earth">time.plnt.earth</a>'s unified temporal framework, quantum (τ = ℏ/E) and relativistic (T = E/c³) formulations meet at bridge energy E = √(ℏc³) ≈ 333 TeV. Below the bridge (all nuclear/atomic physics), τ = ℏ/E is correct.
     </div>
     
-    <p><strong>The central question:</strong> Does expressing physical systems in τ-space reveal structure not evident in energy space?</p>
+    <h3 style="margin-top:1.5rem;">Three Interactive Demonstrations:</h3>
     
-    <p>This page provides two interactive demonstrations:</p>
-    <ul>
-      <li><strong>Nuclear Spectra Transformation:</strong> Test whether atomic nuclei show harmonic patterns in τ-space (connects to <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>'s universal scaling test)</li>
-      <li><strong>Molecular Cascades:</strong> Visualize how τ accumulates in prebiotic chemistry (connects to <a href="https://42.plnt.earth">42.plnt.earth</a>'s τ-life framework)</li>
-    </ul>
+    <div class="demo-index">
+      <div class="demo-card">
+        <h3>1. Nuclear Decay Scaling</h3>
+        <p>Plot half-lives vs τ across α, β, γ decay modes. Do they collapse to one curve?</p>
+        <div class="badge">Primary Test</div>
+        <p style="font-size:0.85rem;margin-top:0.5rem;">Supports <a href="https://zeta.plnt.earth">zeta.plnt.earth</a></p>
+      </div>
+      
+      <div class="demo-card">
+        <h3>2. Energy Level Harmonics</h3>
+        <p>Transform nuclear energy levels to τ-space. Does harmonic structure emerge?</p>
+        <div class="badge" style="background:var(--accent-purple);">Section 9</div>
+        <p style="font-size:0.85rem;margin-top:0.5rem;">Tests <a href="https://time.plnt.earth">time.plnt.earth</a> §9</p>
+      </div>
+      
+      <div class="demo-card">
+        <h3>3. Molecular Cascades</h3>
+        <p>Visualize τ accumulation in prebiotic chemistry through self-organized criticality.</p>
+        <div class="badge" style="background:var(--accent-gold);">Chemistry</div>
+        <p style="font-size:0.85rem;margin-top:0.5rem;">Explores <a href="https://42.plnt.earth">42.plnt.earth</a></p>
+      </div>
+    </div>
   </section>
 
-  <!-- DEMO 1: NUCLEAR SPECTRA -->
+  <!-- DEMO 1: NUCLEAR DECAY SCALING -->
   <section class="demo-section">
-    <h2>Demo 1: Nuclear Spectra Transformation</h2>
+    <h2>Demo 1: Nuclear Decay Universal Scaling (PRIMARY TEST)</h2>
     
-    <p>Nuclear excited states typically show irregular energy spacing. The hypothesis from <a href="https://time.plnt.earth">time.plnt.earth</a>: expressing these levels as temporal charges τₙ = ℏ/Eₙ may reveal harmonic or monotonic structure.</p>
+    <p>This tests the central prediction from <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>: If τ is more fundamental than energy, then α, β, and γ decays—despite having completely different mechanisms—should show universal τ-scaling.</p>
     
     <div class="callout-box">
-      <strong>Connection to zeta.plnt.earth:</strong> This demo visualizes the E → τ transformation. For the complete falsifiable test using nuclear decay half-lives across α, β, and γ modes, see <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>. That test can distinguish whether τ or E is more fundamental using existing NNDC data.
+      <strong>The Test:</strong> Plot log(t₁/₂) vs log(τ_eff) where τ_eff = ℏ/Q. If all three decay modes collapse to a single curve, τ may be fundamental. If they show three distinct curves, energy is fundamental. Full protocol at <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>.
     </div>
+
+    <div class="demo-grid">
+      
+      <!-- CHART -->
+      <div class="canvas-area">
+        <canvas id="decayCanvas"></canvas>
+      </div>
+
+      <!-- CONTROLS -->
+      <div class="controls">
+        
+        <div class="control-group">
+          <div class="control-label">Add Decay Data</div>
+          <div class="control-desc">Format: Q-value (MeV), half-life (s), mode (alpha/beta/gamma)</div>
+          <div class="input-table">
+            <textarea id="decayInput" placeholder="5.30, 1.41e17, alpha&#10;0.57, 3.16e8, beta&#10;2.22, 0.00001, gamma"></textarea>
+          </div>
+          <div class="btn-row">
+            <button class="btn active" id="plotDecayBtn">Plot Data</button>
+            <button class="btn" id="clearDecayBtn">Clear</button>
+          </div>
+          <div class="preset-btns">
+            <button class="preset-btn" id="presetU238">²³⁸U α-decay</button>
+            <button class="preset-btn" id="presetCs137">¹³⁷Cs β-decay</button>
+            <button class="preset-btn" id="presetCo60">⁶⁰Co γ-decay</button>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Points</div>
+            <div class="stat-value" id="decayPoints">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Modes</div>
+            <div class="stat-value" id="decayModes">—</div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <div class="legend-box" style="background:#4ac0b4"></div>
+            <span>Alpha (α) decay</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-box" style="background:#a572cf"></div>
+            <span>Beta (β) decay</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-box" style="background:#e6c04d"></div>
+            <span>Gamma (γ) decay</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <h3>What This Tests</h3>
+    <ul>
+      <li><strong>Universal curve:</strong> All modes collapse → τ may be fundamental</li>
+      <li><strong>Three distinct curves:</strong> Modes separate → energy is fundamental</li>
+      <li><strong>Mechanism independence:</strong> Does τ unify processes with different physics?</li>
+    </ul>
+
+    <p><strong>Full Test:</strong> This is a simplified version. For the complete falsifiable test with comprehensive NNDC data, statistical analysis, and power-law fitting, see <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>.</p>
+  </section>
+
+  <!-- DEMO 2: ENERGY LEVEL HARMONICS -->
+  <section class="demo-section">
+    <h2>Demo 2: Nuclear Energy Level Harmonics</h2>
     
-    <p>Enter energy levels (in MeV) below and see if τ-space reveals simpler patterns than energy space.</p>
+    <p>Nuclear excited states typically show irregular energy spacing. The hypothesis from <a href="https://time.plnt.earth">time.plnt.earth</a> Section 9 (Maria Goeppert Mayer): expressing these levels as temporal charges τₙ = ℏ/Eₙ may reveal harmonic or monotonic structure.</p>
+    
+    <p>Enter energy levels (in MeV) and see if τ-space reveals simpler patterns than energy space.</p>
 
     <div class="demo-grid">
       
@@ -580,7 +695,7 @@ li{
         
         <div class="control-group">
           <div class="control-label">Energy Levels (MeV)</div>
-          <div class="control-desc">Enter one energy per line. Example: Lead-208 excited states.</div>
+          <div class="control-desc">Enter one energy per line.</div>
           <div class="input-table">
             <textarea id="energyInput" placeholder="0.0&#10;2.615&#10;4.086&#10;4.323&#10;4.610"></textarea>
           </div>
@@ -592,15 +707,10 @@ li{
         </div>
 
         <div class="control-group">
-          <button class="btn active" id="transformBtn">Transform to τ-Space</button>
-        </div>
-
-        <div class="control-group">
           <div class="control-label">Display Options</div>
           <div class="btn-row">
             <button class="btn active" id="showEnergy">Energy</button>
             <button class="btn" id="showTau">τ-Space</button>
-            <button class="btn" id="showBoth">Both</button>
           </div>
         </div>
 
@@ -623,22 +733,20 @@ li{
     <ul>
       <li><strong>Linear τ spacing:</strong> τₙ = τ₀ · n (harmonic oscillator)</li>
       <li><strong>Quadratic τ spacing:</strong> τₙ = τ₀ · n² (hydrogen-like)</li>
-      <li><strong>Other functional forms:</strong> Power laws, exponentials</li>
+      <li><strong>Other patterns:</strong> Power laws, exponentials</li>
       <li><strong>Random scatter:</strong> No apparent τ-structure</li>
     </ul>
 
-    <p><strong>Full Framework:</strong> For the complete mathematical derivation, dimensional consistency proof, and bridge energy calculation, see <a href="https://time.plnt.earth">time.plnt.earth</a>. For the falsifiable nuclear test protocol, see <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>.</p>
+    <p><strong>Theory:</strong> Full mathematical derivation at <a href="https://time.plnt.earth">time.plnt.earth</a> Section 9.</p>
   </section>
 
-  <!-- DEMO 2: MOLECULAR CASCADES -->
+  <!-- DEMO 3: MOLECULAR CASCADES -->
   <section class="demo-section">
-    <h2>Demo 2: Molecular τ-Cascades</h2>
+    <h2>Demo 3: Molecular τ-Cascades</h2>
     
-    <p>This demo models how temporal charge accumulates in molecular systems—the chemistry behind <a href="https://42.plnt.earth">42.plnt.earth</a>'s τ-life framework.</p>
+    <p>This visualizes how temporal charge accumulates in molecular systems—the chemistry behind <a href="https://42.plnt.earth">42.plnt.earth</a>'s τ-life framework.</p>
     
-    <p><strong>Scenario:</strong> Prebiotic chemistry on early Earth (or in <a href="https://42.plnt.earth">Bennu asteroid samples</a>). Molecules like glucose, ribose, and amino acids each carry temporal charge τ = ℏ/E. When enough τ accumulates in a region, chemical reactions cascade—modeling metabolic pathways.</p>
-
-    <p>This demonstrates <strong>self-organized criticality</strong> in chemistry, following Bak-Tang-Wiesenfeld's sandpile model (Phys. Rev. Lett., 1987).</p>
+    <p><strong>Scenario:</strong> Prebiotic chemistry. Molecules like glucose carry temporal charge τ = ℏ/E. When enough τ accumulates, chemical reactions cascade—modeling metabolic pathways through self-organized criticality.</p>
 
     <div class="demo-grid">
       
@@ -653,44 +761,43 @@ li{
         <div class="control-group">
           <div class="control-label">Simulation</div>
           <div class="btn-row">
-            <button class="btn" id="stepBtn">Step</button>
-            <button class="btn" id="playBtn">Play</button>
+            <button class="btn" id="stepBtn">+1</button>
+            <button class="btn" id="step10Btn">+10</button>
+            <button class="btn" id="step100Btn">+100</button>
+          </div>
+          <div class="btn-row">
+            <button class="btn" id="playBtn">Auto</button>
             <button class="btn" id="resetBtn">Reset</button>
           </div>
         </div>
 
         <div class="control-group">
           <div class="control-label">Molecule Type</div>
-          <div class="control-desc">Different molecules have different τ values based on their energy content.</div>
           <div class="btn-row">
-            <button class="btn active" id="glucoseBtn">Glucose<br><small>τ = 2.3×10⁻²⁴ s</small></button>
-            <button class="btn" id="atpBtn">ATP<br><small>τ = 1.1×10⁻²⁴ s</small></button>
-          </div>
-          <div class="btn-row">
-            <button class="btn" id="riboseBtn">Ribose<br><small>τ = 3.5×10⁻²⁴ s</small></button>
-            <button class="btn" id="aminoBtn">Amino Acid<br><small>τ = 5×10⁻²⁴ s</small></button>
+            <button class="btn active" id="glucoseBtn">Glucose</button>
+            <button class="btn" id="atpBtn">ATP</button>
+            <button class="btn" id="riboseBtn">Ribose</button>
           </div>
         </div>
 
         <div class="control-group">
           <div class="slider-group">
             <div class="slider-label">
-              <span>Speed</span>
+              <span>Auto Speed</span>
               <span id="speedVal">100 ms</span>
             </div>
-            <input type="range" id="speedSlider" min="10" max="500" value="100">
+            <input type="range" id="speedSlider" min="1" max="500" value="100">
           </div>
         </div>
 
         <div class="control-group">
           <div class="slider-group">
             <div class="slider-label">
-              <span>Threshold (activation energy)</span>
+              <span>Threshold</span>
               <span id="thresholdVal">4.0</span>
             </div>
             <input type="range" id="thresholdSlider" min="2" max="10" step="0.5" value="4">
           </div>
-          <div class="control-desc">How much τ must accumulate before a reaction cascade occurs.</div>
         </div>
 
         <div class="stats">
@@ -707,7 +814,7 @@ li{
         <div class="legend">
           <div class="legend-item">
             <div class="legend-box" style="background:#4ac0b4"></div>
-            <span>Low τ accumulation</span>
+            <span>Low τ</span>
           </div>
           <div class="legend-item">
             <div class="legend-box" style="background:#a572cf"></div>
@@ -715,7 +822,7 @@ li{
           </div>
           <div class="legend-item">
             <div class="legend-box" style="background:#e6c04d"></div>
-            <span>Cascade triggering</span>
+            <span>Cascade</span>
           </div>
         </div>
 
@@ -725,15 +832,13 @@ li{
 
     <h3>Physical Interpretation</h3>
     <ul>
-      <li><strong>Cells = molecular sites:</strong> Each grid cell represents a spatial region containing molecules</li>
-      <li><strong>τ accumulation:</strong> As molecules diffuse in, total τ increases (like charging a battery)</li>
-      <li><strong>Threshold:</strong> Activation energy for chemical reactions (ATP synthesis, polymerization)</li>
-      <li><strong>Cascade:</strong> When threshold is reached, reaction releases products that trigger neighboring reactions</li>
+      <li><strong>τ accumulation:</strong> Like charging a chemical battery</li>
+      <li><strong>Threshold:</strong> Activation energy for reactions</li>
+      <li><strong>Cascade:</strong> Reactions trigger neighboring reactions (metabolism)</li>
+      <li><strong>Self-organization:</strong> Complexity emerges from simple rules</li>
     </ul>
 
-    <p><strong>Connection to life:</strong> This models the <strong>sustained ordered τ-flux</strong> described at <a href="https://42.plnt.earth">42.plnt.earth</a>. Life maintains itself through continuous cycling of temporal charge—glucose → ATP → work → heat. The cascade pattern shows how metabolic pathways self-organize.</p>
-
-    <p><strong>Bennu connection:</strong> NASA's <a href="https://42.plnt.earth">OSIRIS-REx samples</a> found glucose, ribose, and "space gum" polymers. These are the actual τ-storage molecules that enable life. This demo shows how they could self-organize into reaction networks.</p>
+    <p><strong>Connection to life:</strong> Models sustained ordered τ-flux (glucose → ATP → work → heat). See full chemistry at <a href="https://42.plnt.earth">42.plnt.earth</a>.</p>
   </section>
 
   <!-- FOOTER -->
@@ -748,9 +853,11 @@ li{
 
     <div class="collaboration-section">
       <h3>How to Test & Collaborate</h3>
-      <p><strong>Try these tools:</strong> Use the nuclear spectra transformation to explore your own energy level data. See if τ-space reveals patterns.</p>
-      <p><strong>Run the primary test:</strong> The falsifiable nuclear decay test at <a href="https://zeta.plnt.earth">zeta.plnt.earth</a> can be run with existing NNDC data.</p>
-      <p><strong>Explore the theory:</strong> Full mathematical framework, dimensional consistency, and experimental predictions at <a href="https://time.plnt.earth">time.plnt.earth</a>.</p>
+      <p><strong>Use Demo 1:</strong> Plot your own nuclear decay data. See if α, β, γ collapse to universal curve.</p>
+      <p><strong>Use Demo 2:</strong> Test nuclear energy levels for τ-harmonic spacing.</p>
+      <p><strong>Use Demo 3:</strong> Explore molecular τ accumulation and cascade dynamics.</p>
+      <p><strong>Run the full test:</strong> Complete nuclear decay protocol at <a href="https://zeta.plnt.earth">zeta.plnt.earth</a> with NNDC data.</p>
+      <p><strong>Read the theory:</strong> Full framework at <a href="https://time.plnt.earth">time.plnt.earth</a>.</p>
       <p><strong>Connect:</strong></p>
       <ul style="list-style:none;padding:0;margin:0.5rem 0;">
         <li><strong>X:</strong> <a href="https://x.com/illuminatnotes">@illuminatnotes</a></li>
@@ -777,18 +884,155 @@ li{
 </div>
 
 <script>
-// DEMO 1: NUCLEAR SPECTRA TRANSFORMATION
+const HBAR = 1.055e-34; // J·s
+const MEV_TO_J = 1.602e-13; // MeV to Joules
+
+// ============================================================================
+// DEMO 1: NUCLEAR DECAY UNIVERSAL SCALING
+// ============================================================================
+
+const decayCanvas = document.getElementById('decayCanvas');
+const decayCtx = decayCanvas.getContext('2d');
+
+let decayData = []; // {Q: MeV, halfLife: s, mode: 'alpha'|'beta'|'gamma'}
+
+const modeColors = {
+  alpha: '#4ac0b4',
+  beta: '#a572cf',
+  gamma: '#e6c04d'
+};
+
+function parseDecayData() {
+  const text = document.getElementById('decayInput').value;
+  const lines = text.split('\n').filter(l => l.trim());
+  
+  decayData = [];
+  for (const line of lines) {
+    const parts = line.split(',').map(s => s.trim());
+    if (parts.length >= 3) {
+      const Q = parseFloat(parts[0]);
+      const halfLife = parseFloat(parts[1]);
+      const mode = parts[2].toLowerCase();
+      
+      if (!isNaN(Q) && !isNaN(halfLife) && ['alpha', 'beta', 'gamma'].includes(mode)) {
+        decayData.push({ Q, halfLife, mode });
+      }
+    }
+  }
+  
+  document.getElementById('decayPoints').textContent = decayData.length;
+  const modes = [...new Set(decayData.map(d => d.mode))];
+  document.getElementById('decayModes').textContent = modes.length > 0 ? modes.join(', ') : '—';
+  
+  renderDecayPlot();
+}
+
+function renderDecayPlot() {
+  const w = decayCanvas.width;
+  const h = decayCanvas.height;
+  
+  decayCtx.fillStyle = '#000';
+  decayCtx.fillRect(0, 0, w, h);
+  
+  if (decayData.length === 0) {
+    decayCtx.fillStyle = '#c2d0e9';
+    decayCtx.font = '14px system-ui';
+    decayCtx.textAlign = 'center';
+    decayCtx.fillText('Enter decay data to begin', w/2, h/2);
+    return;
+  }
+  
+  const margin = 60;
+  const plotW = w - 2*margin;
+  const plotH = h - 2*margin;
+  
+  // Calculate tau_eff = hbar/Q for each decay
+  const points = decayData.map(d => ({
+    x: Math.log10(HBAR / (d.Q * MEV_TO_J)), // log(tau_eff)
+    y: Math.log10(d.halfLife), // log(t_1/2)
+    mode: d.mode
+  }));
+  
+  const xVals = points.map(p => p.x);
+  const yVals = points.map(p => p.y);
+  const xMin = Math.min(...xVals);
+  const xMax = Math.max(...xVals);
+  const yMin = Math.min(...yVals);
+  const yMax = Math.max(...yVals);
+  const xRange = xMax - xMin || 1;
+  const yRange = yMax - yMin || 1;
+  
+  // Draw axes
+  decayCtx.strokeStyle = '#2a3348';
+  decayCtx.lineWidth = 2;
+  decayCtx.beginPath();
+  decayCtx.moveTo(margin, margin);
+  decayCtx.lineTo(margin, h - margin);
+  decayCtx.lineTo(w - margin, h - margin);
+  decayCtx.stroke();
+  
+  // Labels
+  decayCtx.fillStyle = '#a3acc2';
+  decayCtx.font = '12px system-ui';
+  decayCtx.textAlign = 'center';
+  decayCtx.fillText('log(τ_eff) [s]', w/2, h - 20);
+  
+  decayCtx.save();
+  decayCtx.translate(20, h/2);
+  decayCtx.rotate(-Math.PI/2);
+  decayCtx.fillText('log(t₁/₂) [s]', 0, 0);
+  decayCtx.restore();
+  
+  // Plot points
+  for (const point of points) {
+    const px = margin + ((point.x - xMin) / xRange) * plotW;
+    const py = h - margin - ((point.y - yMin) / yRange) * plotH;
+    
+    decayCtx.fillStyle = modeColors[point.mode];
+    decayCtx.beginPath();
+    decayCtx.arc(px, py, 5, 0, Math.PI * 2);
+    decayCtx.fill();
+  }
+}
+
+document.getElementById('plotDecayBtn').addEventListener('click', parseDecayData);
+
+document.getElementById('clearDecayBtn').addEventListener('click', () => {
+  document.getElementById('decayInput').value = '';
+  decayData = [];
+  parseDecayData();
+});
+
+document.getElementById('presetU238').addEventListener('click', () => {
+  document.getElementById('decayInput').value = '4.27, 1.41e17, alpha';
+  parseDecayData();
+});
+
+document.getElementById('presetCs137').addEventListener('click', () => {
+  document.getElementById('decayInput').value = '0.514, 9.48e8, beta';
+  parseDecayData();
+});
+
+document.getElementById('presetCo60').addEventListener('click', () => {
+  document.getElementById('decayInput').value = '2.5, 1.66e8, gamma';
+  parseDecayData();
+});
+
+decayCanvas.width = decayCanvas.parentElement.clientWidth;
+decayCanvas.height = decayCanvas.parentElement.clientWidth;
+renderDecayPlot();
+
+// ============================================================================
+// DEMO 2: ENERGY LEVEL HARMONICS
+// ============================================================================
+
 const spectraCanvas = document.getElementById('spectraCanvas');
 const spectraCtx = spectraCanvas.getContext('2d');
 
-const HBAR = 1.055e-34; // J·s
-const MEV_TO_J = 1.602e-13; // MeV to Joules conversion
-
 let energyLevels = [];
 let tauLevels = [];
-let displayMode = 'energy'; // 'energy', 'tau', 'both'
+let displayMode = 'energy';
 
-// Presets for nuclear data
 const presets = {
   pb208: [0, 2.615, 4.086, 4.323, 4.610, 4.842, 5.279],
   ca48: [0, 3.832, 4.507, 5.281, 6.288, 7.416],
@@ -801,7 +1045,7 @@ function parseEnergyInput() {
   energyLevels = lines.map(l => parseFloat(l)).filter(e => !isNaN(e) && e >= 0);
   tauLevels = energyLevels.map(E => {
     const E_joules = E * MEV_TO_J;
-    return HBAR / E_joules; // τ = ℏ/E
+    return E_joules > 0 ? HBAR / E_joules : 0;
   });
   
   document.getElementById('levelCount').textContent = energyLevels.length;
@@ -882,12 +1126,7 @@ function renderSpectra() {
   }
 }
 
-// Event listeners for Demo 1
-document.getElementById('transformBtn').addEventListener('click', parseEnergyInput);
-
-document.getElementById('energyInput').addEventListener('input', () => {
-  parseEnergyInput();
-});
+document.getElementById('energyInput').addEventListener('input', parseEnergyInput);
 
 document.getElementById('presetPb208').addEventListener('click', () => {
   document.getElementById('energyInput').value = presets.pb208.join('\n');
@@ -906,43 +1145,36 @@ document.getElementById('presetO16').addEventListener('click', () => {
 
 document.getElementById('showEnergy').addEventListener('click', function() {
   displayMode = 'energy';
-  document.querySelectorAll('#showEnergy, #showTau, #showBoth').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#showEnergy, #showTau').forEach(b => b.classList.remove('active'));
   this.classList.add('active');
   renderSpectra();
 });
 
 document.getElementById('showTau').addEventListener('click', function() {
   displayMode = 'tau';
-  document.querySelectorAll('#showEnergy, #showTau, #showBoth').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#showEnergy, #showTau').forEach(b => b.classList.remove('active'));
   this.classList.add('active');
   renderSpectra();
 });
 
-document.getElementById('showBoth').addEventListener('click', function() {
-  displayMode = 'both';
-  document.querySelectorAll('#showEnergy, #showTau, #showBoth').forEach(b => b.classList.remove('active'));
-  this.classList.add('active');
-  renderSpectra();
-});
-
-// Initialize Demo 1
 spectraCanvas.width = spectraCanvas.parentElement.clientWidth;
 spectraCanvas.height = spectraCanvas.parentElement.clientWidth;
 renderSpectra();
 
-// DEMO 2: MOLECULAR CASCADE SIMULATION
+// ============================================================================
+// DEMO 3: MOLECULAR CASCADE SIMULATION
+// ============================================================================
+
 const cascadeCanvas = document.getElementById('cascadeCanvas');
 const cascadeCtx = cascadeCanvas.getContext('2d');
 
 const GRID_SIZE = 100;
 const CELL_SIZE = cascadeCanvas.width / GRID_SIZE;
 
-// Molecular τ values (scaled for visualization)
 const molecules = {
   glucose: { tau: 2.3, name: 'Glucose' },
   atp: { tau: 1.1, name: 'ATP' },
-  ribose: { tau: 3.5, name: 'Ribose' },
-  amino: { tau: 5.0, name: 'Amino Acid' }
+  ribose: { tau: 3.5, name: 'Ribose' }
 };
 
 let grid = [];
@@ -1019,13 +1251,10 @@ function renderCascade() {
       let r, g, b;
       
       if (Math.abs(tau) > threshold * 0.8) {
-        // Near threshold - gold
         r = 230 * intensity; g = 192 * intensity; b = 77 * intensity;
       } else if (Math.abs(tau) > threshold * 0.5) {
-        // Medium - purple
         r = 165 * intensity; g = 114 * intensity; b = 207 * intensity;
       } else {
-        // Low - blue
         r = 74 * intensity; g = 192 * intensity; b = 180 * intensity;
       }
       
@@ -1042,10 +1271,12 @@ function updateCascadeStats() {
   document.getElementById('cascadeCount').textContent = cascadeStats.cascades;
 }
 
-function step() {
-  const x = Math.floor(Math.random() * GRID_SIZE);
-  const y = Math.floor(Math.random() * GRID_SIZE);
-  addMolecule(x, y);
+function step(n = 1) {
+  for (let i = 0; i < n; i++) {
+    const x = Math.floor(Math.random() * GRID_SIZE);
+    const y = Math.floor(Math.random() * GRID_SIZE);
+    addMolecule(x, y);
+  }
   renderCascade();
 }
 
@@ -1056,15 +1287,14 @@ function togglePlay() {
   if (playing) {
     btn.textContent = 'Pause';
     btn.classList.add('active');
-    playInterval = setInterval(step, speed);
+    playInterval = setInterval(() => step(1), speed);
   } else {
-    btn.textContent = 'Play';
+    btn.textContent = 'Auto';
     btn.classList.remove('active');
     clearInterval(playInterval);
   }
 }
 
-// Event listeners for Demo 2
 cascadeCanvas.addEventListener('click', (e) => {
   const rect = cascadeCanvas.getBoundingClientRect();
   const x = Math.floor((e.clientX - rect.left) / CELL_SIZE);
@@ -1073,7 +1303,9 @@ cascadeCanvas.addEventListener('click', (e) => {
   renderCascade();
 });
 
-document.getElementById('stepBtn').addEventListener('click', step);
+document.getElementById('stepBtn').addEventListener('click', () => step(1));
+document.getElementById('step10Btn').addEventListener('click', () => step(10));
+document.getElementById('step100Btn').addEventListener('click', () => step(100));
 document.getElementById('playBtn').addEventListener('click', togglePlay);
 
 document.getElementById('resetBtn').addEventListener('click', () => {
@@ -1081,14 +1313,14 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   initGrid();
 });
 
-['glucoseBtn', 'atpBtn', 'riboseBtn', 'aminoBtn'].forEach(id => {
+['glucoseBtn', 'atpBtn', 'riboseBtn'].forEach(id => {
   document.getElementById(id).addEventListener('click', function() {
-    ['glucoseBtn', 'atpBtn', 'riboseBtn', 'aminoBtn'].forEach(i => {
+    ['glucoseBtn', 'atpBtn', 'riboseBtn'].forEach(i => {
       document.getElementById(i).classList.remove('active');
     });
     this.classList.add('active');
     
-    const map = { glucoseBtn: 'glucose', atpBtn: 'atp', riboseBtn: 'ribose', aminoBtn: 'amino' };
+    const map = { glucoseBtn: 'glucose', atpBtn: 'atp', riboseBtn: 'ribose' };
     currentMolecule = map[id];
   });
 });
@@ -1098,7 +1330,7 @@ document.getElementById('speedSlider').addEventListener('input', (e) => {
   document.getElementById('speedVal').textContent = `${speed} ms`;
   if (playing) {
     clearInterval(playInterval);
-    playInterval = setInterval(step, speed);
+    playInterval = setInterval(() => step(1), speed);
   }
 });
 
@@ -1107,11 +1339,14 @@ document.getElementById('thresholdSlider').addEventListener('input', (e) => {
   document.getElementById('thresholdVal').textContent = threshold.toFixed(1);
 });
 
-// Initialize Demo 2
 initGrid();
 
 // Resize handler
 window.addEventListener('resize', () => {
+  decayCanvas.width = decayCanvas.parentElement.clientWidth;
+  decayCanvas.height = decayCanvas.parentElement.clientWidth;
+  renderDecayPlot();
+  
   spectraCanvas.width = spectraCanvas.parentElement.clientWidth;
   spectraCanvas.height = spectraCanvas.parentElement.clientWidth;
   renderSpectra();
