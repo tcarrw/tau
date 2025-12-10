@@ -37,7 +37,7 @@ body{
 /* HEADER */
 header{
   text-align:center;
-  margin-bottom:3rem;
+  margin-bottom:2rem;
   padding-bottom:2rem;
   border-bottom:1px solid var(--line);
 }
@@ -58,6 +58,67 @@ h1{
 .subtitle{
   font-size:1.1rem;
   color:var(--ink-muted);
+  margin-bottom:1rem;
+}
+
+.meta{
+  font-size:0.9rem;
+  color:var(--ink-muted);
+  opacity:0.8;
+}
+
+/* NAVIGATION */
+.nav-callout{
+  background:rgba(124,58,237,0.08);
+  border:1px solid var(--accent-purple);
+  border-radius:12px;
+  padding:1.5rem;
+  margin:2rem auto;
+  max-width:720px;
+}
+
+.nav-callout strong{
+  color:var(--accent);
+}
+
+.nav-callout a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.nav-callout a:hover{
+  text-decoration:underline;
+}
+
+.nav-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.nav-box{
+  background:rgba(0,0,0,0.3);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:1rem;
+}
+
+.nav-box h3{
+  font-size:1rem;
+  margin-bottom:0.5rem;
+  color:var(--accent);
+}
+
+.nav-box p{
+  font-size:0.85rem;
+  color:var(--ink-muted);
+  margin:0;
+}
+
+@media(max-width:768px){
+  .nav-grid{grid-template-columns:1fr;}
 }
 
 /* INTRO SECTION */
@@ -377,14 +438,41 @@ input[type="range"]::-moz-range-thumb{
   text-decoration:underline;
 }
 
+.curiosity-note{
+  max-width:640px;
+  margin:1.5rem auto;
+  line-height:1.6;
+}
+
 .footer-links{
   margin-top:1.5rem;
   padding-top:1.5rem;
   border-top:1px solid var(--line);
 }
 
+.collaboration-section{
+  margin-top:2rem;
+  padding:1.5rem;
+  background:rgba(124,58,237,0.05);
+  border:1px solid var(--line);
+  border-radius:12px;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.collaboration-section h3{
+  font-size:1.2rem;
+  margin-bottom:1rem;
+  color:var(--accent);
+}
+
+.collaboration-section p{
+  margin-bottom:0.75rem;
+}
+
 .footer-meta{
-  margin-top:1rem;
+  margin-top:1.5rem;
   font-size:0.85rem;
   opacity:0.7;
 }
@@ -396,6 +484,18 @@ ul{
 
 li{
   margin-bottom:0.25rem;
+}
+
+.callout-box{
+  background:rgba(245,158,11,0.1);
+  border:1px dashed var(--line);
+  border-radius:8px;
+  padding:1rem;
+  margin:1rem 0;
+}
+
+.callout-box strong{
+  color:var(--accent-gold);
 }
 
 @media(max-width:768px){
@@ -412,8 +512,24 @@ li{
   <header>
     <div class="logo">τ</div>
     <h1>Temporal Charge Dynamics</h1>
-    <p class="subtitle">Exploring τ = ℏ/E through nuclear spectra and molecular cascades</p>
+    <p class="subtitle">Interactive tools for exploring τ = ℏ/E through nuclear spectra and molecular cascades</p>
+    <p class="meta">December 10, 2025 · #pluribus · Illumina 1 · 6:1</p>
   </header>
+
+  <!-- NAVIGATION CALLOUT -->
+  <div class="nav-callout">
+    <p style="text-align:center;margin-bottom:1rem;"><strong>This page provides interactive tools for the τ framework</strong></p>
+    <div class="nav-grid">
+      <div class="nav-box">
+        <h3>📐 Theory</h3>
+        <p><a href="https://time.plnt.earth">time.plnt.earth</a> — Complete unified framework: quantum (τ = ℏ/E) meets relativistic (T = E/c³) at bridge energy</p>
+      </div>
+      <div class="nav-box">
+        <h3>⚡ Primary Test</h3>
+        <p><a href="https://zeta.plnt.earth">zeta.plnt.earth</a> — Nuclear decay universal scaling test using existing NNDC data</p>
+      </div>
+    </div>
+  </div>
 
   <!-- INTRODUCTION -->
   <section class="intro">
@@ -427,12 +543,16 @@ li{
     
     <p><strong>Physical interpretation:</strong> τ represents the characteristic "tick rate" of matter. Higher energy → shorter τ (faster oscillation). Lower energy → longer τ (slower oscillation).</p>
     
-    <p>The central question: <strong>Does expressing physical systems in τ-space reveal structure not evident in energy space?</strong></p>
+    <div class="callout-box">
+      <strong>The Framework:</strong> This comes from <a href="https://time.plnt.earth">time.plnt.earth</a>'s unified temporal framework, where quantum (τ = ℏ/E) and relativistic (T = E/c³) formulations meet at bridge energy E = √(ℏc³) ≈ 333 TeV. Below the bridge energy (which includes all nuclear and atomic physics), τ = ℏ/E is the correct formulation.
+    </div>
     
-    <p>This page explores two applications:</p>
+    <p><strong>The central question:</strong> Does expressing physical systems in τ-space reveal structure not evident in energy space?</p>
+    
+    <p>This page provides two interactive demonstrations:</p>
     <ul>
-      <li><strong>Nuclear Spectra:</strong> Do atomic nuclei show harmonic patterns in τ-space? (<a href="https://time.plnt.earth">Theory at time.plnt.earth</a>)</li>
-      <li><strong>Molecular Cascades:</strong> How does τ accumulate in prebiotic chemistry? (<a href="https://42.plnt.earth">Applications at 42.plnt.earth</a>)</li>
+      <li><strong>Nuclear Spectra Transformation:</strong> Test whether atomic nuclei show harmonic patterns in τ-space (connects to <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>'s universal scaling test)</li>
+      <li><strong>Molecular Cascades:</strong> Visualize how τ accumulates in prebiotic chemistry (connects to <a href="https://42.plnt.earth">42.plnt.earth</a>'s τ-life framework)</li>
     </ul>
   </section>
 
@@ -440,14 +560,18 @@ li{
   <section class="demo-section">
     <h2>Demo 1: Nuclear Spectra Transformation</h2>
     
-    <p>Nuclear excited states typically show irregular energy spacing. The hypothesis: expressing these levels as temporal charges τₙ = ℏ/Eₙ may reveal harmonic or monotonic structure.</p>
+    <p>Nuclear excited states typically show irregular energy spacing. The hypothesis from <a href="https://time.plnt.earth">time.plnt.earth</a>: expressing these levels as temporal charges τₙ = ℏ/Eₙ may reveal harmonic or monotonic structure.</p>
     
-    <p>This test comes from <a href="https://time.plnt.earth">time.plnt.earth</a>'s core framework. Enter energy levels (in MeV) and see if τ-space reveals simpler patterns.</p>
+    <div class="callout-box">
+      <strong>Connection to zeta.plnt.earth:</strong> This demo visualizes the E → τ transformation. For the complete falsifiable test using nuclear decay half-lives across α, β, and γ modes, see <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>. That test can distinguish whether τ or E is more fundamental using existing NNDC data.
+    </div>
+    
+    <p>Enter energy levels (in MeV) below and see if τ-space reveals simpler patterns than energy space.</p>
 
     <div class="demo-grid">
       
       <!-- CHART -->
-      <div class="chart-area">
+      <div class="canvas-area">
         <canvas id="spectraCanvas"></canvas>
       </div>
 
@@ -503,7 +627,7 @@ li{
       <li><strong>Random scatter:</strong> No apparent τ-structure</li>
     </ul>
 
-    <p><strong>Interpretation:</strong> If τ-space reveals simpler patterns than energy space, it suggests time may be a more fundamental coordinate for quantum systems. See full analysis at <a href="https://time.plnt.earth">time.plnt.earth</a>.</p>
+    <p><strong>Full Framework:</strong> For the complete mathematical derivation, dimensional consistency proof, and bridge energy calculation, see <a href="https://time.plnt.earth">time.plnt.earth</a>. For the falsifiable nuclear test protocol, see <a href="https://zeta.plnt.earth">zeta.plnt.earth</a>.</p>
   </section>
 
   <!-- DEMO 2: MOLECULAR CASCADES -->
@@ -614,16 +738,35 @@ li{
 
   <!-- FOOTER -->
   <footer class="earth-footer">
-    <p>
-      <a href="https://earth.plnt.earth">Earth</a> is the ground beneath all of this. It stays, no matter what changes above. A place to hold joy, music, and motion—untouched by the noise. If the system shifts, Earth remains.
-    </p>
+    <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+      <a href="https://earth.plnt.earth">Earth</a> is the ground beneath all of this. It stays, no matter what changes above.
+    </div>
+    
+    <div class="curiosity-note">
+      I built this because I want to find people who are curious and care — about the universe, about each other, about what we're making together. New physics isn't just equations. It's the world those equations let us build. If you feel that, you're already here. Let's go.
+    </div>
+
+    <div class="collaboration-section">
+      <h3>How to Test & Collaborate</h3>
+      <p><strong>Try these tools:</strong> Use the nuclear spectra transformation to explore your own energy level data. See if τ-space reveals patterns.</p>
+      <p><strong>Run the primary test:</strong> The falsifiable nuclear decay test at <a href="https://zeta.plnt.earth">zeta.plnt.earth</a> can be run with existing NNDC data.</p>
+      <p><strong>Explore the theory:</strong> Full mathematical framework, dimensional consistency, and experimental predictions at <a href="https://time.plnt.earth">time.plnt.earth</a>.</p>
+      <p><strong>Connect:</strong></p>
+      <ul style="list-style:none;padding:0;margin:0.5rem 0;">
+        <li><strong>X:</strong> <a href="https://x.com/illuminatnotes">@illuminatnotes</a></li>
+        <li><strong>TikTok:</strong> <a href="https://tiktok.com/@plntearth.t">@plntearth.t</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/tcarrw">github.com/tcarrw</a></li>
+      </ul>
+    </div>
     
     <div class="footer-links">
       <strong>Explore:</strong>
-      <a href="https://time.plnt.earth">Time (τ Framework)</a> ·
-      <a href="https://42.plnt.earth">42 (τ-Life & Bennu)</a> ·
-      <a href="https://zeta.plnt.earth">Zeta (ζ Regularization)</a> ·
-      <a href="https://infinity.plnt.earth">Infinity (∞ Mathematics)</a>
+      <a href="https://time.plnt.earth">τ Framework</a> ·
+      <a href="https://zeta.plnt.earth">Zeta Test</a> ·
+      <a href="https://42.plnt.earth">42 (τ-Life)</a> ·
+      <a href="https://charter.plnt.earth">Charter</a> ·
+      <a href="https://comet.plnt.earth">Comet</a> ·
+      <a href="https://manifolddynamics.plnt.earth">Manifold</a>
     </div>
     
     <div class="footer-meta">
